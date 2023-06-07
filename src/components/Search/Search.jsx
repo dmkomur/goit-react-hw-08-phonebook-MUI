@@ -1,6 +1,7 @@
 import { StyledSearchWrap, StyledSearchInput } from './Search.styled';
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'Redux/phoneSlice';
+import { Button } from '@mui/material';
 
 export const Search = () => {
   const dispatcher = useDispatch();
@@ -15,6 +16,11 @@ export const Search = () => {
         onChange={handleChange}
         placeholder="enter name here"
       />
+      <Button variant="text" color="primary">
+        Text
+      </Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
     </StyledSearchWrap>
   );
 };
