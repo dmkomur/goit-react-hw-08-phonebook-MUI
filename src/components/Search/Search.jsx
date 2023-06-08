@@ -10,14 +10,6 @@ export const Search = () => {
   };
   return (
     <>
-      {/* <StyledSearchWrap>
-        <h3>Search contact by name</h3>
-        <StyledSearchInput
-          type="text"
-          onChange={handleChange}
-          placeholder="enter name here"
-        />
-      </StyledSearchWrap> */}
       <Grid container justify="center">
         <Grid item lg={12}>
           <TextField
