@@ -1,7 +1,7 @@
 import { StyledSearchWrap, StyledSearchInput } from './Search.styled';
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'Redux/phoneSlice';
-import { Button } from '@mui/material';
+import { Button, Box, TextField, Grid } from '@mui/material';
 
 export const Search = () => {
   const dispatcher = useDispatch();
@@ -9,18 +9,28 @@ export const Search = () => {
     dispatcher(setFilter(e.target.value));
   };
   return (
-    <StyledSearchWrap>
-      <h3>Search contact by name</h3>
-      <StyledSearchInput
-        type="text"
-        onChange={handleChange}
-        placeholder="enter name here"
-      />
-      <Button variant="text" color="primary">
-        Text
-      </Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-    </StyledSearchWrap>
+    <>
+      {/* <StyledSearchWrap>
+        <h3>Search contact by name</h3>
+        <StyledSearchInput
+          type="text"
+          onChange={handleChange}
+          placeholder="enter name here"
+        />
+      </StyledSearchWrap> */}
+      <Grid container justify="center">
+        <Grid item lg={12}>
+          <TextField
+            id="outlined-basic"
+            label="Outlined"
+            variant="outlined"
+            onChange={handleChange}
+            placeholder="enter name here"
+            color="secondary"
+            label="Name"
+          />
+        </Grid>
+      </Grid>
+    </>
   );
 };
